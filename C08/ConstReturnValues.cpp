@@ -32,9 +32,9 @@ void f7(X& x) { // Pass by non-const reference
 int main() {
   f5() = X(1); // OK -- non-const return value
   f5().modify(); // OK
-//!  f7(f5()); // Causes warning or error
+//  f7(f5()); // Causes warning or error
 // Causes compile-time errors:
-//!  f6() = X(1);
-//!  f6().modify();
-//!  f7(f6());
+//  f6() = X(1);
+//  f6().modify();
+//  f7(f6());
 } ///:~

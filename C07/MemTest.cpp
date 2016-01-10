@@ -41,11 +41,14 @@ void MyString::print(ostream& os) {
 MyString::~MyString() { delete buf; }
 
 int main() {
-  MyString s("My test string");
+  char temp[] = "My test string";
+  MyString s(temp);
   s.print(cout);
-  s.concat(" some additional stuff");
+  char temp1[] = " some additional stuff";
+  s.concat(temp1);
   s.print(cout);
   MyString s2;
-  s2.concat("Using default constructor");
+  char temp2[] = "Using default constructor";
+  s2.concat(temp2);
   s2.print(cout);
 } ///:~

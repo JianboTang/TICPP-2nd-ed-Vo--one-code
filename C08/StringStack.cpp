@@ -3,10 +3,11 @@
 // Available at http://www.BruceEckel.com
 // (c) Bruce Eckel 2000
 // Copyright notice in Copyright.txt
-// Using static const to create a 
+// Using static const to create a
 // compile-time constant inside a class
 #include <string>
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 class StringStack {
@@ -48,7 +49,7 @@ string iceCream[] = {
   "deep chocolate fudge"
 };
 
-const int iCsz = 
+const int iCsz =
   sizeof iceCream / sizeof *iceCream;
 
 int main() {

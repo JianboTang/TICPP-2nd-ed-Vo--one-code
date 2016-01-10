@@ -10,7 +10,8 @@
 # Invoke with: make -f gcc.makefile
 
 CPP = g++
-OFLAG = -o
+OFLAG = -g -o
+CPPFLAGS = -g
 .SUFFIXES : .o .cpp .c
 .cpp.o :
 	$(CPP) $(CPPFLAGS) -c $<
