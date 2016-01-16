@@ -9,8 +9,11 @@ using namespace std;
 void increment(int*& i) { i++; }
 
 int main() {
-  int* i = 0;
+  int x = 10; 
+  int* i = &x;
   cout << "i = " << i << endl;
+  cout << "*i = " << (*i) << endl;
   increment(i);
   cout << "i = " << i << endl;
+  cout << "*i = " << (*i) << endl;
 } ///:~

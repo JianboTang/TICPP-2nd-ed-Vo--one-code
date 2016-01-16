@@ -24,4 +24,7 @@ int main() {
   pmInt = &Data::c;
   dp->*pmInt = 49;
   dp->print();
+  pmInt = &Data::a;
+  dp->*pmInt = 30;
+  d.print();
 } ///:~

@@ -3,6 +3,7 @@
 // Available at http://www.BruceEckel.com
 // (c) Bruce Eckel 2000
 // Copyright notice in Copyright.txt
+#include <iostream>
 namespace X {
   class Y {
     static int i;
@@ -19,10 +20,19 @@ public:
   Z(int i);
   int g();
 };
+void X::Y::f()
+{
+  i ++;
+  std::cout << "i = " << i << std::endl;
+}
 X::Z::Z(int i) { u = v = w = i; }
 int X::Z::g() { return u = v = w = 0; }
 void X::func() {
   X::Z a(1);
   a.g();
 }
-int main(){} ///:~
+int main(){
+  X::Y a;
+  a.f();
+  a.f();
+} ///:~

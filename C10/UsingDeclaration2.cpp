@@ -14,4 +14,6 @@ void m() {
   f(); // Calls U::f();
   g(); // Calls V::g();
 }
-int main() {} ///:~
+int main() {
+	m();
+} ///:~

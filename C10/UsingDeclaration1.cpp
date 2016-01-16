@@ -10,4 +10,6 @@ void h() {
   f(); // Calls V::f();
   U::f(); // Must fully qualify to call
 }
-int main() {} ///:~
+int main() {
+	h();
+} ///:~

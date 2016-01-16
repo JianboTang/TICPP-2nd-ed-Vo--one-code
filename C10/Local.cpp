@@ -11,7 +11,17 @@ using namespace std;
 class Outer {
   class Inner {
     static int i; // OK
+	public:
+	    Inner() { 
+	    	std::cout << "inner.i : " << i << std::endl;
+	    }
   };
+  Inner x,y;
+public:
+	Outer ()
+	{
+
+	}
 };
 
 int Outer::Inner::i = 47;

@@ -3,6 +3,7 @@
 // Available at http://www.BruceEckel.com
 // (c) Bruce Eckel 2000
 // Copyright notice in Copyright.txt
+#include <iostream>
 class X {
   int i;
   static int j;
@@ -16,7 +17,9 @@ public:
   static int incr() {
     //! i++; // Error: static member function
     // cannot access non-static member data
-    return ++j;
+    ++j;
+    std::cout << "j : " << j << std::endl; 
+    return j;
   }
   static int f() {
     //! val(); // Error: static member function
@@ -28,7 +31,7 @@ public:
 int X::j = 0;
 
 int main() {
-  X x;
+  X x(10);
   X* xp = &x;
   x.f();
   xp->f();

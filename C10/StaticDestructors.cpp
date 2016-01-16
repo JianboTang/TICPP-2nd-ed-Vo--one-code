@@ -5,6 +5,7 @@
 // Copyright notice in Copyright.txt
 // Static object destructors
 #include <fstream>
+#include <iostream>
 using namespace std;
 ofstream out("statdest.out"); // Trace file
 

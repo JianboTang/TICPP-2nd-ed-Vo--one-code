@@ -143,4 +143,5 @@ int main() {
   cout << "Entering rename(\"Bob\")" << endl;
   bobs.getDog()->rename("Bob");
   cout << "After rename(\"Bob\")" << endl;
+  cout << "bobs:" << bobs <<endl;
 } ///:~
