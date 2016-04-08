@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
   // Pop some lines from the stack:
   string* s;
   for(int i = 0; i < 10; i++) {
-    if((s = (string*)textlines.pop())==0) break;
+    if((s = textlines.pop())==0) break;
     cout << *s << endl;
     delete s; 
   } // The destructor deletes the other strings.
